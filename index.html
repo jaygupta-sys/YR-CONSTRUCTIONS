@@ -2,7 +2,7 @@
 <html class="dark scroll-smooth" lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover"/>
   <title>YR CONSTRUCTIONS | Luxury Architectural Atelier & Master Builder</title>
   <meta name="description" content="YR CONSTRUCTIONS — Premier architectural atelier and master building collective crafting monumental residences, structural landmarks, and bespoke luxury spaces."/>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
@@ -81,6 +81,54 @@
       z-index: 100;
       transition: width 0.08s linear;
       box-shadow: 0 0 10px rgba(197, 180, 154, 0.8);
+    }
+
+    
+    /* Mobile / Touch ergonomics: completely disable custom cursor on touch devices */
+    @media (pointer: coarse), (hover: none) {
+      #cursor-dot, #cursor-ring {
+        display: none !important;
+      }
+      body, a, button, input, select, textarea, .interactive-el {
+        cursor: auto !important;
+      }
+    }
+
+    /* Smooth horizontal swipeable containers without scrollbar clutter */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* iOS smooth tap highlight removal */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Mobile form inputs: 16px minimum on mobile to prevent iOS Safari auto-zoom */
+    @media (max-width: 640px) {
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    /* Touch range slider thumb size */
+    input[type=range]::-webkit-slider-thumb {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #c5b49a;
+      cursor: pointer;
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #c5b49a;
+      cursor: pointer;
     }
 
     /* Custom Scrollbar */
@@ -219,33 +267,33 @@
   <div id="cursor-dot"></div>
   <div id="cursor-ring"></div>
 
-  <!-- TOP ATELIER TICKER BAR (GLOBAL REACH) -->
-  <div class="w-full bg-[#08080a] border-b border-[#27272e]/30 py-2 px-6 sm:px-12 flex items-center justify-between text-[10px] font-mono tracking-widest text-[#71717a]">
-    <div class="flex items-center gap-4">
-      <span class="inline-flex items-center gap-1.5 text-[#c5b49a]">
+  <!-- TOP ATELIER TICKER BAR (GLOBAL REACH - MOBILE OPTIMIZED) -->
+  <div class="w-full bg-[#08080a] border-b border-[#27272e]/30 py-1.5 px-4 sm:px-12 flex items-center justify-between text-[9px] sm:text-[10px] font-mono tracking-wider sm:tracking-widest text-[#71717a]">
+    <div class="flex items-center gap-2 sm:gap-4">
+      <span class="inline-flex items-center gap-1 text-[#c5b49a] whitespace-nowrap">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        ATELIER CALENDAR 2025/2026
+        CALENDAR 2025/2026
       </span>
       <span class="hidden md:inline text-[#27272e]">|</span>
       <span class="hidden md:inline">ZURICH · TOKYO · LONDON · MUMBAI</span>
     </div>
-    <div class="flex items-center gap-4">
-      <span>FEDERAL ARCHITECTURAL REGISTRY N° CH-849-24</span>
+    <div class="flex items-center gap-3 sm:gap-4">
+      <span class="hidden sm:inline">FEDERAL REGISTRY CH-849</span>
       <span class="hidden sm:inline text-[#27272e]">|</span>
-      <button onclick="toggleAmbientAudio()" id="audioToggleBtn" class="hover:text-[#c5b49a] flex items-center gap-1.5 transition-colors interactive-el" title="Ambient Soundscape">
-        <span id="audioIcon" class="material-symbols-outlined text-[13px]">volume_off</span>
-        <span id="audioLabel">AUDIO OFF</span>
+      <button onclick="toggleAmbientAudio()" id="audioToggleBtn" class="hover:text-[#c5b49a] flex items-center gap-1 transition-colors interactive-el" title="Ambient Soundscape">
+        <span id="audioIcon" class="material-symbols-outlined text-[12px] sm:text-[13px]">volume_off</span>
+        <span id="audioLabel" class="text-[9px] sm:text-[10px]">AUDIO</span>
       </button>
     </div>
   </div>
 
-  <!-- ULTRA-PREMIUM NAVIGATION BAR -->
-  <header class="fixed top-8 left-0 w-full z-50 bg-[#0c0d10]/85 backdrop-blur-2xl border-b border-[#c5b49a]/20 transition-all duration-300">
-    <div class="h-20 sm:h-24 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
+  <!-- ULTRA-PREMIUM NAVIGATION BAR (MOBILE FIRST) -->
+  <header class="fixed top-7 sm:top-8 left-0 w-full z-50 bg-[#0c0d10]/95 backdrop-blur-2xl border-b border-[#c5b49a]/20 transition-all duration-300">
+    <div class="h-16 sm:h-24 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
       
-      <!-- Brand Logo (Pure Graphic with No Colliding Text) -->
-      <a href="#" class="flex items-center group py-2 interactive-el magnetic-btn" aria-label="YR CONSTRUCTIONS Home">
-        <img src="logo_champagne.png" alt="YR CONSTRUCTIONS" class="h-11 sm:h-14 w-auto object-contain transition-transform duration-500 group-hover:scale-105 filter drop-shadow-[0_2px_14px_rgba(197, 180, 154,0.35)]"/>
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center group py-1 interactive-el magnetic-btn" aria-label="YR CONSTRUCTIONS Home">
+        <img src="logo_champagne.png" alt="YR CONSTRUCTIONS" class="h-8 sm:h-14 w-auto object-contain transition-transform duration-500 group-hover:scale-105 filter drop-shadow-[0_2px_14px_rgba(197,180,154,0.35)]"/>
       </a>
 
       <!-- Desktop Navigation Links (Spaced Out & Perfectly Aligned) -->
@@ -281,20 +329,30 @@
       </div>
     </div>
 
-    <!-- Mobile Drawer Menu -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-[#0c0d10]/95 backdrop-blur-2xl border-b border-[#c5b49a]/20 px-8 py-8 space-y-5">
-      <a href="#projects" class="block text-xs font-semibold tracking-[0.25em] uppercase text-[#c5b49a] mobile-nav-link">Portfolio</a>
-      <a href="#video-reels" class="block text-xs font-semibold tracking-[0.25em] uppercase text-[#d4d4d8] hover:text-[#c5b49a] mobile-nav-link flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-[#c5b49a]"></span> Cinematic Films
+    <!-- Mobile Drawer Menu (Full Height Luxury Slide) -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#0c0d10]/98 backdrop-blur-3xl border-b border-[#c5b49a]/30 px-6 py-8 space-y-4 max-h-[calc(100dvh-4rem)] overflow-y-auto">
+      <div class="border-b border-[#27272e]/50 pb-3 flex justify-between items-center text-[10px] font-mono text-[#71717a]">
+        <span>NAVIGATION MONOGRAPH</span>
+        <span class="text-[#c5b49a]">YR ARCHITECTURAL ATELIER</span>
+      </div>
+      <a href="#projects" class="block py-2 text-sm font-semibold tracking-[0.2em] uppercase text-[#c5b49a] mobile-nav-link">01 // Curated Portfolio</a>
+      <a href="#video-reels" class="block py-2 text-sm font-semibold tracking-[0.2em] uppercase text-[#d4d4d8] hover:text-[#c5b49a] mobile-nav-link flex items-center justify-between">
+        <span>02 // Cinematic Films</span>
+        <span class="px-2 py-0.5 bg-[#c5b49a]/20 text-[#c5b49a] text-[9px] font-mono">4K HDR</span>
       </a>
-      <a href="#materiality" class="block text-xs font-semibold tracking-[0.25em] uppercase text-[#d4d4d8] hover:text-[#c5b49a] mobile-nav-link">Materiality Studio</a>
-      <a href="#expertise" class="block text-xs font-semibold tracking-[0.25em] uppercase text-[#d4d4d8] hover:text-[#c5b49a] mobile-nav-link">Expertise</a>
-      <a href="#estimator" class="block text-xs font-semibold tracking-[0.25em] uppercase text-[#d4d4d8] hover:text-[#c5b49a] mobile-nav-link">Scope Estimator</a>
-      <a href="#inquiry" class="block text-xs font-semibold tracking-[0.25em] uppercase text-[#d4d4d8] hover:text-[#c5b49a] mobile-nav-link">Commission & Inquiry</a>
-      <div class="pt-4">
-        <a href="#inquiry" class="block text-center py-3.5 bg-[#c5b49a] text-[#0c0d10] font-semibold text-xs tracking-widest uppercase mobile-nav-link shadow-xl">
+      <a href="#materiality" class="block py-2 text-sm font-semibold tracking-[0.2em] uppercase text-[#d4d4d8] hover:text-[#c5b49a] mobile-nav-link">03 // Materiality & Geology</a>
+      <a href="#expertise" class="block py-2 text-sm font-semibold tracking-[0.2em] uppercase text-[#d4d4d8] hover:text-[#c5b49a] mobile-nav-link">04 // Pillars of Execution</a>
+      <a href="#estimator" class="block py-2 text-sm font-semibold tracking-[0.2em] uppercase text-[#d4d4d8] hover:text-[#c5b49a] mobile-nav-link">05 // Feasibility Estimator</a>
+      <a href="#philosophy" class="block py-2 text-sm font-semibold tracking-[0.2em] uppercase text-[#d4d4d8] hover:text-[#c5b49a] mobile-nav-link">06 // Atelier Ethos</a>
+      <a href="#inquiry" class="block py-2 text-sm font-semibold tracking-[0.2em] uppercase text-[#d4d4d8] hover:text-[#c5b49a] mobile-nav-link">07 // Commission Inquiry</a>
+      <div class="pt-4 border-t border-[#27272e]/60 space-y-3">
+        <a href="#inquiry" class="block text-center py-4 bg-[#c5b49a] text-[#0c0d10] font-semibold text-xs tracking-widest uppercase mobile-nav-link shadow-xl">
           Initiate Commission
         </a>
+        <div class="flex justify-between items-center text-[10px] font-mono text-[#71717a] pt-1">
+          <span>CALL CONCIERGE:</span>
+          <a href="tel:+919820000000" class="text-[#c5b49a]">+91 98200 00000</a>
+        </div>
       </div>
     </div>
   </header>
@@ -302,8 +360,8 @@
   <!-- MAIN CONTAINER -->
   <main class="w-full pt-28 sm:pt-32">
 
-        <!-- 1. HERO SECTION: CINEMATIC ARCHITECTURAL SHOWCASE -->
-    <section class="relative w-full min-h-[96vh] flex flex-col justify-between overflow-hidden bg-[#0c0d10]">
+        <!-- 1. HERO SECTION: CINEMATIC ARCHITECTURAL SHOWCASE (MOBILE OPTIMIZED) -->
+    <section class="relative w-full min-h-[100dvh] sm:min-h-[96vh] flex flex-col justify-between overflow-hidden bg-[#0c0d10]">
       
       <!-- 4K Background Slides Layer with Parallax Scale -->
       <div id="hero-bg-container" class="absolute inset-0 w-full h-full">
@@ -325,10 +383,10 @@
       <div class="absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-transparent to-[#0c0d10]/60 pointer-events-none"></div>
 
       <!-- Top Right Floating Cinematic Mode Switcher -->
-      <div class="absolute top-8 sm:top-10 right-6 sm:right-12 z-20 flex items-center gap-3">
-        <button onclick="toggleHeroCinemaMode()" id="heroCinemaBtn" class="px-4 py-2 bg-[#14161b]/80 backdrop-blur-md border border-[#c5b49a]/50 text-[#c5b49a] text-[10px] font-mono tracking-widest uppercase hover:bg-[#c5b49a] hover:text-[#0c0d10] transition-all duration-300 shadow-xl flex items-center gap-2 interactive-el magnetic-btn">
-          <span id="heroCinemaIcon" class="material-symbols-outlined text-sm">videocam</span>
-          <span id="heroCinemaLabel">CINEMATIC FILM MODE</span>
+      <div class="absolute top-3 sm:top-10 right-3 sm:right-12 z-20 flex items-center gap-2">
+        <button onclick="toggleHeroCinemaMode()" id="heroCinemaBtn" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-[#14161b]/90 backdrop-blur-md border border-[#c5b49a]/50 text-[#c5b49a] text-[9px] sm:text-[10px] font-mono tracking-wider sm:tracking-widest uppercase hover:bg-[#c5b49a] hover:text-[#0c0d10] transition-all duration-300 shadow-xl flex items-center gap-1.5 interactive-el">
+          <span id="heroCinemaIcon" class="material-symbols-outlined text-xs sm:text-sm">videocam</span>
+          <span id="heroCinemaLabel"><span class="hidden sm:inline">CINEMATIC </span>FILM MODE</span>
         </button>
       </div>
 
@@ -339,38 +397,38 @@
         <span class="text-[10px] text-[#d4d4d8] uppercase tracking-[0.3em]">YR CONSTRUCTIONS // MONUMENTAL BUILDS</span>
       </div>
 
-      <!-- Hero Main Content Grid: Left Narrative + Right Floating Landmark Dossier -->
-      <div class="relative z-20 w-full px-6 sm:px-10 lg:px-16 pt-24 sm:pt-32 pb-16 flex-1 flex flex-col justify-center max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+      <!-- Hero Main Content Grid: Left Narrative + Right Floating Landmark Dossier (Mobile Ergonomics) -->
+      <div class="relative z-20 w-full px-4 sm:px-10 lg:px-16 pt-20 sm:pt-32 pb-10 sm:pb-16 flex-1 flex flex-col justify-center max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end">
           
           <!-- Left: Hero Headline & Description -->
-          <div class="lg:col-span-8 space-y-6">
+          <div class="lg:col-span-8 space-y-4 sm:space-y-6">
             <!-- Badge -->
-            <div class="inline-flex items-center gap-3 reveal-item">
-              <span class="h-[1px] w-12 bg-[#c5b49a]"></span>
-              <span class="text-[11px] sm:text-[12px] font-semibold text-[#c5b49a] tracking-[0.3em] uppercase">
-                Private Residences & Structural Landmarks — Est. 2008
+            <div class="inline-flex items-center gap-2.5 sm:gap-3 reveal-item">
+              <span class="h-[1px] w-8 sm:w-12 bg-[#c5b49a]"></span>
+              <span class="text-[10px] sm:text-[12px] font-semibold text-[#c5b49a] tracking-[0.2em] sm:tracking-[0.3em] uppercase">
+                Private Residences & Landmarks — Est. 2008
               </span>
             </div>
 
             <!-- Monumental Headline -->
-            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-[#ffffff] tracking-tight leading-[1.05] max-w-3xl reveal-item">
+            <h1 class="font-serif text-3xl sm:text-6xl md:text-7xl lg:text-8xl text-[#ffffff] tracking-tight leading-[1.08] max-w-3xl reveal-item">
               WE BUILD BEYOND <br/>
               <span class="italic font-light gold-gradient-text">IMAGINATION.</span>
             </h1>
 
             <!-- Subtitle -->
-            <p class="text-base sm:text-lg text-[#a1a1aa] max-w-2xl leading-relaxed font-light reveal-item">
+            <p class="text-sm sm:text-lg text-[#a1a1aa] max-w-2xl leading-relaxed font-light reveal-item">
               Crafting architectural monuments through tectonic engineering, raw geologic materiality, and uncompromising master craftsmanship across prime global landscapes.
             </p>
 
-            <!-- Action Buttons -->
-            <div class="flex flex-wrap items-center gap-5 sm:gap-7 pt-2 reveal-item">
-              <a href="#video-reels" class="group inline-flex items-center gap-3 px-8 py-4 bg-[#14161b]/90 backdrop-blur-md border border-[#c5b49a] text-[#c5b49a] shadow-2xl transition-all duration-500 hover:bg-[#c5b49a] hover:text-[#0c0d10] interactive-el magnetic-btn">
-                <span class="material-symbols-outlined text-2xl transition-transform group-hover:scale-110">play_circle</span>
-                <span class="text-xs font-semibold uppercase tracking-[0.25em]">Watch Project Films</span>
+            <!-- Action Buttons (Mobile Full-Width Tap Targets) -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-6 pt-2 reveal-item">
+              <a href="#video-reels" class="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#14161b]/90 backdrop-blur-md border border-[#c5b49a] text-[#c5b49a] shadow-2xl transition-all duration-500 hover:bg-[#c5b49a] hover:text-[#0c0d10] interactive-el text-center">
+                <span class="material-symbols-outlined text-xl sm:text-2xl transition-transform group-hover:scale-110">play_circle</span>
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.25em]">Watch Project Films</span>
               </a>
-              <a href="#inquiry" class="inline-flex items-center gap-2 px-6 py-4 text-[#d4d4d8] hover:text-[#c5b49a] transition-colors text-xs font-semibold uppercase tracking-[0.25em] interactive-el magnetic-btn">
+              <a href="#inquiry" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 text-[#d4d4d8] hover:text-[#c5b49a] transition-colors text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.25em] interactive-el border border-white/10 sm:border-transparent text-center">
                 <span>Commission Atelier</span>
                 <span class="material-symbols-outlined text-sm">north_east</span>
               </a>
@@ -417,18 +475,18 @@
         </div>
       </div>
 
-      <!-- Bottom Interactive Scene Switcher & Scroll Indicator -->
-      <div class="relative z-20 w-full px-6 sm:px-10 lg:px-16 py-6 border-t border-[#27272e]/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <!-- Bottom Interactive Scene Switcher & Scroll Indicator (Swipeable on Mobile) -->
+      <div class="relative z-20 w-full px-4 sm:px-10 lg:px-16 py-4 sm:py-6 border-t border-[#27272e]/50 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
         <!-- Slide Switcher Tabs -->
-        <div class="flex items-center gap-3 font-mono text-[11px]">
-          <span class="text-[10px] text-[#71717a] uppercase tracking-widest hidden md:inline">SELECT SCENE:</span>
-          <button onclick="switchHeroSlide(0)" id="heroSlideBtn0" class="hero-slide-btn active px-3 py-1 bg-[#1c1e25] text-[#c5b49a] border border-[#c5b49a]/60 uppercase interactive-el">01 // ALPS SPIRE</button>
-          <button onclick="switchHeroSlide(1)" id="heroSlideBtn1" class="hero-slide-btn px-3 py-1 bg-transparent text-[#71717a] hover:text-white uppercase interactive-el">02 // AZURE CANTILEVER</button>
-          <button onclick="switchHeroSlide(2)" id="heroSlideBtn2" class="hero-slide-btn px-3 py-1 bg-transparent text-[#71717a] hover:text-white uppercase interactive-el">03 // VILLA SOLARIS</button>
+        <div class="flex items-center gap-2 sm:gap-3 font-mono text-[10px] sm:text-[11px] overflow-x-auto no-scrollbar w-full sm:w-auto pb-1 sm:pb-0">
+          <span class="text-[9px] sm:text-[10px] text-[#71717a] uppercase tracking-widest hidden md:inline">SCENE:</span>
+          <button onclick="switchHeroSlide(0)" id="heroSlideBtn0" class="hero-slide-btn active px-2.5 py-1 sm:px-3 bg-[#1c1e25] text-[#c5b49a] border border-[#c5b49a]/60 uppercase whitespace-nowrap interactive-el">01 // ALPS</button>
+          <button onclick="switchHeroSlide(1)" id="heroSlideBtn1" class="hero-slide-btn px-2.5 py-1 sm:px-3 bg-transparent text-[#71717a] hover:text-white uppercase whitespace-nowrap interactive-el">02 // AZURE</button>
+          <button onclick="switchHeroSlide(2)" id="heroSlideBtn2" class="hero-slide-btn px-2.5 py-1 sm:px-3 bg-transparent text-[#71717a] hover:text-white uppercase whitespace-nowrap interactive-el">03 // SOLARIS</button>
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="flex items-center gap-3">
+        <div class="hidden sm:flex items-center gap-3">
           <span class="text-[10px] text-[#71717a] uppercase tracking-[0.35em] font-mono">Scroll To Explore</span>
           <div class="w-[1px] h-6 bg-gradient-to-b from-[#c5b49a] via-[#c5b49a]/40 to-transparent animate-pulse"></div>
         </div>
@@ -436,7 +494,7 @@
     </section>
 
     <!-- 2. OUR PROJECTS IN MOTION: CINEMATIC 4K VIDEO REELS -->
-    <section class="w-full bg-[#09090c] py-28 px-6 sm:px-10 lg:px-16 border-t border-[#27272e]/30 relative" id="video-reels">
+    <section class="w-full bg-[#09090c] py-16 sm:py-28 px-4 sm:px-10 lg:px-16 border-t border-[#27272e]/30 relative" id="video-reels">
       <div class="max-w-7xl mx-auto space-y-16">
         
         <!-- Section Header -->
@@ -656,7 +714,7 @@
     </section>
 
     <!-- 3. INTERACTIVE MATERIALITY & QUARRY SPECIMEN LAB (UI/UX PRO MAX + DESIGN TASTE FEATURE) -->
-    <section class="w-full bg-[#0d0d12] py-28 px-6 sm:px-10 lg:px-16 border-t border-[#27272e]/30 relative" id="materiality">
+    <section class="w-full bg-[#0d0d12] py-16 sm:py-28 px-4 sm:px-10 lg:px-16 border-t border-[#27272e]/30 relative" id="materiality">
       <div class="max-w-7xl mx-auto space-y-16">
         
         <!-- Header with Tectonic Badges -->
@@ -673,10 +731,10 @@
         <!-- Interactive Specimen Studio (4 Swatches + Live Spec Viewer) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch reveal-item">
           
-          <!-- Left: Specimen Selector Tabs -->
-          <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+          <!-- Left: Specimen Selector Tabs (Touch Friendly on Mobile) -->
+          <div class="lg:col-span-5 flex flex-col justify-between space-y-3 sm:space-y-4">
             
-            <button onclick="selectMaterial(0)" id="mat-btn-0" class="material-tab-btn active text-left p-6 bg-[#14161b] border-l-2 border-[#c5b49a] border-y border-r border-[#27272e]/40 transition-all duration-300 interactive-el">
+            <button onclick="selectMaterial(0)" id="mat-btn-0" class="material-tab-btn active text-left p-4 sm:p-6 bg-[#14161b] border-l-2 border-[#c5b49a] border-y border-r border-[#27272e]/40 transition-all duration-300 interactive-el">
               <div class="flex items-center justify-between mb-2">
                 <span class="font-mono text-xs text-[#c5b49a]">SPEC // TRAVERTINE-01</span>
                 <span class="text-[10px] font-mono text-[#71717a] uppercase">Tivoli, Italy</span>
@@ -685,7 +743,7 @@
               <p class="text-xs text-[#a1a1aa] font-light">Cross-cut sedimentary limestone with calibrated natural porous cavities.</p>
             </button>
 
-            <button onclick="selectMaterial(1)" id="mat-btn-1" class="material-tab-btn text-left p-6 bg-[#14161b]/60 hover:bg-[#14161b] border-l-2 border-transparent border-y border-r border-[#27272e]/40 transition-all duration-300 interactive-el">
+            <button onclick="selectMaterial(1)" id="mat-btn-1" class="material-tab-btn text-left p-4 sm:p-6 bg-[#14161b]/60 hover:bg-[#14161b] border-l-2 border-transparent border-y border-r border-[#27272e]/40 transition-all duration-300 interactive-el">
               <div class="flex items-center justify-between mb-2">
                 <span class="font-mono text-xs text-[#a1a1aa]">SPEC // BASALT-02</span>
                 <span class="text-[10px] font-mono text-[#71717a] uppercase">Kyushu, Japan</span>
@@ -694,7 +752,7 @@
               <p class="text-xs text-[#a1a1aa] font-light">Igneous microcrystalline volcanic rock with extreme compressive resistance.</p>
             </button>
 
-            <button onclick="selectMaterial(2)" id="mat-btn-2" class="material-tab-btn text-left p-6 bg-[#14161b]/60 hover:bg-[#14161b] border-l-2 border-transparent border-y border-r border-[#27272e]/40 transition-all duration-300 interactive-el">
+            <button onclick="selectMaterial(2)" id="mat-btn-2" class="material-tab-btn text-left p-4 sm:p-6 bg-[#14161b]/60 hover:bg-[#14161b] border-l-2 border-transparent border-y border-r border-[#27272e]/40 transition-all duration-300 interactive-el">
               <div class="flex items-center justify-between mb-2">
                 <span class="font-mono text-xs text-[#a1a1aa]">SPEC // ALLOY-03</span>
                 <span class="text-[10px] font-mono text-[#71717a] uppercase">Birmingham Guild</span>
@@ -703,7 +761,7 @@
               <p class="text-xs text-[#a1a1aa] font-light">Bespoke architectural copper-tin alloy engineered to oxidize gracefully with sea air.</p>
             </button>
 
-            <button onclick="selectMaterial(3)" id="mat-btn-3" class="material-tab-btn text-left p-6 bg-[#14161b]/60 hover:bg-[#14161b] border-l-2 border-transparent border-y border-r border-[#27272e]/40 transition-all duration-300 interactive-el">
+            <button onclick="selectMaterial(3)" id="mat-btn-3" class="material-tab-btn text-left p-4 sm:p-6 bg-[#14161b]/60 hover:bg-[#14161b] border-l-2 border-transparent border-y border-r border-[#27272e]/40 transition-all duration-300 interactive-el">
               <div class="flex items-center justify-between mb-2">
                 <span class="font-mono text-xs text-[#a1a1aa]">SPEC // TIMBER-04</span>
                 <span class="text-[10px] font-mono text-[#71717a] uppercase">Nagano Forest</span>
@@ -774,7 +832,7 @@
     </section>
 
     <!-- 4. CURATED BUILT COMMISSIONS (4K PHOTOGRAPHY & GSAP PARALLAX) -->
-    <section class="w-full bg-[#0c0d10] py-28 px-6 sm:px-10 lg:px-16 relative" id="projects">
+    <section class="w-full bg-[#0c0d10] py-16 sm:py-28 px-4 sm:px-10 lg:px-16 relative" id="projects">
       <div class="max-w-7xl mx-auto space-y-16">
         
         <!-- Section Filter Header -->
@@ -784,13 +842,13 @@
             <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#ffffff]">Curated Commissions</h2>
           </div>
 
-          <!-- Interactive Filter Tabs -->
-          <div class="flex flex-wrap items-center gap-2">
-            <button onclick="filterPortfolio('all', this)" class="filter-btn active px-4 py-2.5 bg-[#14161b] text-[#c5b49a] border border-[#c5b49a]/50 text-xs uppercase tracking-[0.2em] interactive-el">All Works (5)</button>
-            <button onclick="filterPortfolio('video', this)" class="filter-btn px-4 py-2.5 bg-transparent text-[#a1a1aa] hover:bg-[#14161b] text-xs uppercase tracking-[0.2em] transition-colors interactive-el">Cinematic Films (2)</button>
-            <button onclick="filterPortfolio('alpine', this)" class="filter-btn px-4 py-2.5 bg-transparent text-[#a1a1aa] hover:bg-[#14161b] text-xs uppercase tracking-[0.2em] transition-colors interactive-el">Alpine Sanctuaries (1)</button>
-            <button onclick="filterPortfolio('coastal', this)" class="filter-btn px-4 py-2.5 bg-transparent text-[#a1a1aa] hover:bg-[#14161b] text-xs uppercase tracking-[0.2em] transition-colors interactive-el">Coastal Pavilions (1)</button>
-            <button onclick="filterPortfolio('gallery', this)" class="filter-btn px-4 py-2.5 bg-transparent text-[#a1a1aa] hover:bg-[#14161b] text-xs uppercase tracking-[0.2em] transition-colors interactive-el">Urban Galleries (1)</button>
+          <!-- Interactive Filter Tabs (Swipeable on Mobile) -->
+          <div class="flex items-center gap-2 overflow-x-auto no-scrollbar w-full sm:w-auto py-1 sm:flex-wrap">
+            <button onclick="filterPortfolio('all', this)" class="filter-btn active px-3.5 py-2 sm:px-4 sm:py-2.5 bg-[#14161b] text-[#c5b49a] border border-[#c5b49a]/50 text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] whitespace-nowrap interactive-el">All Works (5)</button>
+            <button onclick="filterPortfolio('video', this)" class="filter-btn px-3.5 py-2 sm:px-4 sm:py-2.5 bg-transparent text-[#a1a1aa] hover:bg-[#14161b] text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] whitespace-nowrap transition-colors interactive-el">Cinematic Films (2)</button>
+            <button onclick="filterPortfolio('alpine', this)" class="filter-btn px-3.5 py-2 sm:px-4 sm:py-2.5 bg-transparent text-[#a1a1aa] hover:bg-[#14161b] text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] whitespace-nowrap transition-colors interactive-el">Alpine (1)</button>
+            <button onclick="filterPortfolio('coastal', this)" class="filter-btn px-3.5 py-2 sm:px-4 sm:py-2.5 bg-transparent text-[#a1a1aa] hover:bg-[#14161b] text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] whitespace-nowrap transition-colors interactive-el">Coastal (1)</button>
+            <button onclick="filterPortfolio('gallery', this)" class="filter-btn px-3.5 py-2 sm:px-4 sm:py-2.5 bg-transparent text-[#a1a1aa] hover:bg-[#14161b] text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] whitespace-nowrap transition-colors interactive-el">Urban (1)</button>
           </div>
         </div>
 
@@ -897,7 +955,7 @@
     </section>
 
     <!-- 5. INTERACTIVE SCOPE & CONSTRUCTION TIMELINE ESTIMATOR (21ST & SHADCN PATTERN) -->
-    <section class="w-full bg-[#09090c] py-28 px-6 sm:px-10 lg:px-16 border-t border-[#27272e]/30 relative" id="estimator">
+    <section class="w-full bg-[#09090c] py-16 sm:py-28 px-4 sm:px-10 lg:px-16 border-t border-[#27272e]/30 relative" id="estimator">
       <div class="max-w-7xl mx-auto space-y-16">
         
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-[#27272e]/40 pb-8 reveal-item">
@@ -1007,7 +1065,7 @@
     </section>
 
     <!-- 6. ATELIER PHILOSOPHY & CRAFTSMANSHIP (EDITORIAL TRAVERTINE PLATE) -->
-    <section class="w-full bg-[#f4f4f7] text-[#09090b] py-28 px-6 sm:px-10 lg:px-16 relative z-10" id="philosophy">
+    <section class="w-full bg-[#f4f4f7] text-[#09090b] py-16 sm:py-28 px-4 sm:px-10 lg:px-16 relative z-10" id="philosophy">
       <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
         <!-- Architectural Detail Plate (4K Travertine) -->
@@ -1065,7 +1123,7 @@
     </section>
 
     <!-- 7. PILLARS OF EXECUTION / EXPERTISE -->
-    <section class="w-full bg-[#09090c] py-28 px-6 sm:px-10 lg:px-16 relative" id="expertise">
+    <section class="w-full bg-[#09090c] py-16 sm:py-28 px-4 sm:px-10 lg:px-16 relative" id="expertise">
       <div class="max-w-7xl mx-auto space-y-16">
         
         <!-- Header -->
@@ -1243,7 +1301,7 @@
     </section>
 
     <!-- 10. PATRON TESTIMONIALS (EDITORIAL ACCLAIM) -->
-    <section class="w-full bg-[#f4f4f7] text-[#09090b] py-28 px-6 sm:px-10 lg:px-16">
+    <section class="w-full bg-[#f4f4f7] text-[#09090b] py-16 sm:py-28 px-4 sm:px-10 lg:px-16">
       <div class="max-w-7xl mx-auto space-y-16">
         
         <div class="flex items-center gap-4 reveal-item">
@@ -1293,7 +1351,7 @@
     </section>
 
     <!-- 11. BESPOKE COMMISSION INQUIRY FORM -->
-    <section class="w-full bg-[#0c0d10] py-28 px-6 sm:px-10 lg:px-16 relative" id="inquiry">
+    <section class="w-full bg-[#0c0d10] py-16 sm:py-28 px-4 sm:px-10 lg:px-16 relative" id="inquiry">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
           
@@ -1428,20 +1486,20 @@
     </div>
   </footer>
 
-  <!-- MULTI-TAB ARCHITECTURAL DOSSIER MODAL (SHADCN / 21ST COMPONENT ARCHITECTURE) -->
-  <div id="projectModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl hidden flex items-center justify-center p-4 sm:p-8">
-    <div class="relative w-full max-w-5xl bg-[#14161b] border border-[#c5b49a]/40 shadow-2xl p-6 sm:p-10 space-y-6 max-h-[92vh] overflow-y-auto">
+  <!-- MULTI-TAB ARCHITECTURAL DOSSIER MODAL (MOBILE RESPONSIVE) -->
+  <div id="projectModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl hidden flex items-center justify-center p-2 sm:p-8">
+    <div class="relative w-full max-w-5xl bg-[#14161b] border border-[#c5b49a]/40 shadow-2xl p-4 sm:p-10 space-y-5 sm:space-y-6 max-h-[95vh] sm:max-h-[92vh] overflow-y-auto">
       
       <!-- Close Button -->
       <button onclick="closeProjectModal()" class="absolute top-5 right-5 p-2 text-[#d4d4d8] hover:text-[#c5b49a] transition-colors interactive-el" aria-label="Close modal">
         <span class="material-symbols-outlined text-3xl">close</span>
       </button>
 
-      <!-- Modal Tabs Header -->
-      <div class="flex items-center gap-3 border-b border-[#27272e]/50 pb-4 font-mono text-xs">
-        <button onclick="switchModalTab('visuals')" id="tab-btn-visuals" class="modal-tab-btn px-4 py-2 bg-[#1c1e25] text-[#c5b49a] border border-[#c5b49a]/40 font-semibold uppercase interactive-el">1. Visuals & Tour</button>
-        <button onclick="switchModalTab('cad')" id="tab-btn-cad" class="modal-tab-btn px-4 py-2 bg-transparent text-[#a1a1aa] hover:bg-[#1c1e25] uppercase interactive-el">2. CAD Blueprint</button>
-        <button onclick="switchModalTab('specs')" id="tab-btn-specs" class="modal-tab-btn px-4 py-2 bg-transparent text-[#a1a1aa] hover:bg-[#1c1e25] uppercase interactive-el">3. Geotechnical Specs</button>
+      <!-- Modal Tabs Header (Swipeable on Mobile) -->
+      <div class="flex items-center gap-2 sm:gap-3 border-b border-[#27272e]/50 pb-3 sm:pb-4 font-mono text-xs overflow-x-auto no-scrollbar">
+        <button onclick="switchModalTab('visuals')" id="tab-btn-visuals" class="modal-tab-btn px-3 py-1.5 sm:px-4 sm:py-2 bg-[#1c1e25] text-[#c5b49a] border border-[#c5b49a]/40 font-semibold uppercase whitespace-nowrap interactive-el">1. Visuals & Tour</button>
+        <button onclick="switchModalTab('cad')" id="tab-btn-cad" class="modal-tab-btn px-3 py-1.5 sm:px-4 sm:py-2 bg-transparent text-[#a1a1aa] hover:bg-[#1c1e25] uppercase whitespace-nowrap interactive-el">2. CAD Blueprint</button>
+        <button onclick="switchModalTab('specs')" id="tab-btn-specs" class="modal-tab-btn px-3 py-1.5 sm:px-4 sm:py-2 bg-transparent text-[#a1a1aa] hover:bg-[#1c1e25] uppercase whitespace-nowrap interactive-el">3. Geotechnical Specs</button>
       </div>
 
       <!-- Tab 1: Visuals -->
