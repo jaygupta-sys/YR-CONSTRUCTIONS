@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#3b3933", "on-error": "#690005", "secondary-fixed": "#e5e2da", "secondary": "#c9c6bf", "on-secondary-fixed-variant": "#474741", "surface-container-highest": "#36352f", "outline-variant": "#454743", "on-background": "#e6e2d9", "outline": "#90918b", "on-primary-container": "#7d7d7a", "surface-container": "#21201a", "on-tertiary-fixed": "#281900", "on-primary-fixed": "#1b1c1a", "surface-dim": "#14130e", "primary": "#c7c6c3", "tertiary-fixed-dim": "#e1c295", "on-tertiary-container": "#937952", "error-container": "#93000a", "surface-container-lowest": "#0f0e09", "inverse-on-surface": "#32302a", "secondary-fixed-dim": "#c9c6bf", "surface-container-high": "#2b2a24", "primary-fixed": "#e4e2de", "surface": "#14130e", "on-surface-variant": "#c6c7c1", "on-secondary": "#31312b", "error": "#ffb4ab", "surface-variant": "#36352f", "on-tertiary-fixed-variant": "#584321", "on-error-container": "#ffdad6", "inverse-primary": "#5e5e5c", "secondary-container": "#474741", "tertiary": "#e1c295", "background": "#14130e", "primary-container": "#111210", "on-tertiary": "#402d0c", "on-surface": "#e6e2d9", "on-primary-fixed-variant": "#464744", "inverse-surface": "#e6e2d9", "tertiary-container": "#1b0f00", "on-primary": "#30312e", "surface-tint": "#c7c6c3", "on-secondary-fixed": "#1c1c17", "primary-fixed-dim": "#c7c6c3", "surface-container-low": "#1d1c16", "on-secondary-container": "#b7b5ae", "tertiary-fixed": "#fedeaf" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "2.5rem", "space-xl": "6rem", "gutter-mobile": "1.25rem", "space-xs": "0.375rem", "space-sm": "0.75rem", "space-lg": "3rem", "margin-mobile": "1.5rem", "margin": "4rem", "space-md": "1.5rem" }, "fontFamily": { "headline-lg": [ "Playfair Display" ], "label-caps": [ "Plus Jakarta Sans" ], "label-mono-num": [ "Plus Jakarta Sans" ], "headline-sm": [ "Playfair Display" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Playfair Display" ], "display-hero-mobile": [ "Playfair Display" ], "display-hero": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg": [ "52px", { "lineHeight": "64px", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "label-caps": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.22em", "fontWeight": "600" } ], "label-mono-num": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "400" } ], "headline-sm": [ "26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "500" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" } ], "headline-lg-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "display-hero-mobile": [ "42px", { "lineHeight": "50px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "display-hero": [ "80px", { "lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "headline-md": [ "36px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-md": [ "15px", { "lineHeight": "26px", "letterSpacing": "0.015em", "fontWeight": "300" } ], "body-lg": [ "18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "300" } ] } } } };</script></head><body class="bg-primary-container text-on-surface antialiased selection:bg-tertiary selection:text-on-tertiary"><header class="fixed top-0 left-0 w-full z-50 bg-primary-container/85 backdrop-blur-xl transition-all duration-300 shadow-[0_1px_12px_rgba(0,0,0,0.25)]"><div class="h-20 w-full px-gutter-mobile lg:px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="works" href="#"><img alt="Monograph Architecture Atelier Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBdeGwmABA9MvzYx--8BHf9U0eKBvWSBJVZ7ZH6-cQHzV5Jo6ejwFzcIX2qdNrBWZyuLA7nQObKkgd4kXMcuwrG8_unV6O4A5rKeaDt4YTG0ibyIBeDI5tN8kD6cRC-ZBTYnB2-eo3FV8PLXdHNGkCoQ4xacHhuiY87FPM0ewrInxr7kO_RVoQkHvV74N1BBp0iV2m_U9OX-gdll_FX-lSkSbo9sZUPpIKRWp72PmX-"/><span class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest hidden sm:inline">Monograph Atelier</span></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-tertiary font-medium"><a aria-current="page" class="uppercase transition-colors duration-200 text-tertiary font-medium" data-path="works" href="#">Works</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="philosophy" href="#">Philosophy</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="expertise" href="#">Expertise</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="process" href="#">Process</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="inquiry" href="#">Inquiry</a></nav><div class="flex items-center gap-space-md"><div class="hidden xl:flex flex-col text-right"><span class="font-label-mono-num text-label-mono-num text-secondary">Zurich · Tokyo · London</span><span class="font-label-caps text-[9px] uppercase tracking-widest text-tertiary">Available 2025/2026</span></div><a class="hidden md:inline-flex items-center justify-center px-space-md py-space-xs bg-surface-container font-label-caps text-label-caps uppercase text-tertiary hover:bg-tertiary hover:text-on-tertiary transition-all duration-300" data-path="inquiry" href="#">Initiate Commission</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-primary-container relative min-h-screen"><div class="flex flex-col w-full">
+<!-- 1. HERO SECTION – CINEMATIC EXPERIENCE -->
+<section class="relative w-full min-h-screen -mt-20 flex flex-col justify-between overflow-hidden bg-primary-container">
+<!-- Cinematic Hero Image with Vignette & Gradient Overlay -->
+<div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-1000 scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlUD92snF_yLuwlCseovLh_6sAx3CfcM6P7T0mn5TvjJPcDT6VltOFBWWAW5dIsr2sUIj7rZuQPLGb7_1Ftzh1Z-L2eX8nNjcrCEiSZBicjWs9gEAh31F3ro8MuAa1i5qrlmL6wlTH_XjnFOjMruTibypmfgUO-BRZsVJ3wXY1w3Fa9DJWvJyJ-dnU8GgBAH-Z6opwOSWc-ZWALFFtmfA8w6sprlt1L6WCJ4-d-kg');"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-primary-container/80 via-primary-container/30 to-primary-container"></div>
+<div class="absolute inset-0 bg-radial-gradient from-transparent via-primary-container/40 to-primary-container/90 mix-blend-multiply"></div>
+<!-- Floating Lateral Project Coordinates (Desktop Editorial Datum) -->
+<div class="hidden xl:flex absolute left-8 top-1/2 -translate-y-1/2 [writing-mode:vertical-rl] rotate-180 items-center gap-space-sm z-20 pointer-events-none opacity-80">
+<span class="font-label-mono-num text-label-mono-num text-tertiary">37.4467° N, 25.3289° E</span>
+<div class="h-12 w-[1px] bg-tertiary/40"></div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.25em]">PROJ. N° 048 // VILLA CYCLADES // AEGEAN SEA</span>
+</div>
+<div class="hidden xl:flex absolute right-8 top-1/2 -translate-y-1/2 [writing-mode:vertical-rl] items-center gap-space-sm z-20 pointer-events-none opacity-80">
+<span class="font-label-mono-num text-label-mono-num text-tertiary">ATELIER MONOGRAPH XXIV</span>
+<div class="h-12 w-[1px] bg-tertiary/40"></div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.25em]">ZURICH — TOKYO — LONDON</span>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 w-full px-gutter-mobile lg:px-margin pt-40 md:pt-48 flex-1 flex flex-col justify-center max-w-7xl mx-auto">
+<!-- Badge & Datum Rule -->
+<div class="inline-flex items-center gap-space-sm mb-space-md opacity-90">
+<span class="h-[1px] w-8 bg-tertiary"></span>
+<span class="font-label-caps text-label-caps text-tertiary tracking-[0.28em] uppercase">Private Residences &amp; Monumental Spaces — Est. 2008</span>
+</div>
+<!-- Monumental Headline -->
+<h1 class="font-display-hero text-headline-lg-mobile md:text-display-hero text-on-surface tracking-tight max-w-5xl leading-[1.08] mb-space-md">
+        WE BUILD BEYOND <br class="hidden sm:inline"/>
+<span class="italic font-light text-secondary-fixed">IMAGINATION.</span>
+</h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-md md:text-body-lg text-secondary max-w-2xl mb-space-lg leading-relaxed font-light">
+        Crafting timeless spaces through vision, tectonic precision, and uncompromising architectural permanence across global landscapes.
+      </p>
+<!-- Magnetic-style Architectural CTA -->
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="group relative inline-flex items-center gap-space-sm px-space-lg py-space-md bg-surface-container/90 backdrop-blur-md text-tertiary border-0 shadow-2xl transition-all duration-500 hover:bg-tertiary hover:text-primary-container" href="#monograph-works">
+<span class="font-label-caps text-label-caps uppercase tracking-[0.22em] font-medium">Discover Selected Works</span>
+<span class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1.5">arrow_forward</span>
+<div class="absolute inset-0 bg-tertiary/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-md text-on-surface-variant hover:text-tertiary transition-colors" href="#monograph-inquiry">
+<span class="font-label-caps text-label-caps uppercase tracking-[0.2em]">Commission Atelier</span>
+<span class="material-symbols-outlined text-[14px]">north_east</span>
+</a>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="relative z-10 w-full py-space-md flex flex-col items-center justify-center gap-space-xs">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-[0.3em]">Scroll to Explore</span>
+<div class="w-[1px] h-8 bg-gradient-to-b from-tertiary via-tertiary/40 to-transparent animate-pulse"></div>
+</div>
+</section>
+<!-- 2. INTRODUCTION SECTION (EDITORIAL CONTRAST SPLIT-LAYOUT) -->
+<section class="w-full bg-[#F3F0E8] text-[#14130E] py-space-xl px-gutter-mobile lg:px-margin relative z-10">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Architectural Detail Plate (Left) -->
+<div class="lg:col-span-5 relative group">
+<div class="relative overflow-hidden aspect-[4/5] bg-[#E5E2DA] shadow-2xl">
+<img alt="Sculptural travertine helical staircase in modern residence" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgxl2XFJzBc8iRJ1yndlTI8SZzUHQIiQCTo-laa8U45qbhEHTXEDrsLtweozFgif_N_ytpUxOMhXeciqHoGe3GOcmKIvORWdprglHTgIzJuvdtRHNZEPMVS5Dl0rawXLUjSKRlALCCN4qC6sezrgizNh2zxGmZ1PWHN8TE6v5uNHtTb3k45sliZ4o9dUJi93qDQd67l0b6VEPkJo_-yI76viT3hbeicAEGQ3A0ehI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 text-[#E6E2D9]">
+<span class="font-label-caps text-[10px] tracking-widest text-[#E1C295] block mb-1 uppercase">Tectonic Expression</span>
+<p class="font-headline-sm text-lg leading-snug italic font-serif">"Sculpting light and stone into inhabitable art."</p>
+</div>
+</div>
+<!-- Datum Badge Behind -->
+<div class="hidden sm:block absolute -bottom-6 -right-6 bg-[#14130E] text-[#E6E2D9] p-space-md shadow-xl max-w-xs">
+<span class="font-label-mono-num text-[11px] text-[#E1C295] block mb-1">SPEC // M-082</span>
+<p class="font-body-sm text-[12px] text-[#C9C6BF] leading-tight">Monolithic Roman travertine, hand-honed with continuous fluid balustrade.</p>
+</div>
+</div>
+<!-- Editorial Philosophy Block (Right) -->
+<div class="lg:col-span-7 flex flex-col justify-center space-y-space-md lg:pl-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-10 h-[1px] bg-[#90918B]"></span>
+<span class="font-label-caps text-label-caps uppercase text-[#584321] tracking-[0.24em]">Editorial Colophon &amp; Ethos</span>
+</div>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-[#14130E] font-normal leading-[1.12]">
+          Architecture is more than construction. <br/>
+<span class="italic font-normal text-[#584321]">It is a choreography of human presence.</span>
+</h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-[#31312B] font-light leading-relaxed">
+          Monograph is an international architectural atelier and master construction collective operating at the confluence of structural engineering, spatial choreography, and timeless craftsmanship. We do not build disposable enclosures; we curate monumental legacies that endure across generations.
+        </p>
+<p class="font-body-md text-body-md text-[#474741] font-light leading-relaxed">
+          From wind-swept Mediterranean escarpments to the sheer granite faces of the Swiss Alps, our work resolves complex geomorphology into serene sanctuaries of unyielding permanence.
+        </p>
+<div class="pt-space-sm flex items-center gap-space-lg">
+<a class="inline-flex items-center gap-space-xs font-label-caps text-label-caps uppercase tracking-[0.2em] text-[#14130E] hover:text-[#584321] pb-1 border-b border-[#14130E]/30 hover:border-[#584321] transition-all" href="#monograph-expertise">
+<span>Explore Our Atelier Story</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+<div class="hidden sm:flex flex-col">
+<span class="font-label-mono-num text-[11px] text-[#474741]">ZURICH ATELIER REG.</span>
+<span class="font-label-caps text-[10px] text-[#90918B] uppercase">Bespoke Registry N° 849-01</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SIGNATURE PROJECTS (CURATED MONOGRAPH PORTFOLIO) -->
+<section class="w-full bg-primary-container py-space-xl px-gutter-mobile lg:px-margin relative" id="monograph-works">
+<div class="max-w-7xl mx-auto space-y-space-lg">
+<!-- Section Header with Categorical Filter Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md border-b border-outline-variant/30 pb-space-md">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-tertiary tracking-[0.25em] block mb-space-xs">Archival Folio XXIV</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface">Curated Commissions</h2>
+</div>
+<!-- Filter Chips (Interactive State Simulation) -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-4 py-2 bg-surface-container font-label-caps text-[11px] uppercase tracking-wider text-tertiary">All Works (24)</button>
+<button class="px-4 py-2 bg-transparent hover:bg-surface-container font-label-caps text-[11px] uppercase tracking-wider text-secondary transition-colors">Alpine Sanctuaries (6)</button>
+<button class="px-4 py-2 bg-transparent hover:bg-surface-container font-label-caps text-[11px] uppercase tracking-wider text-secondary transition-colors">Coastal Pavilions (8)</button>
+<button class="px-4 py-2 bg-transparent hover:bg-surface-container font-label-caps text-[11px] uppercase tracking-wider text-secondary transition-colors">Urban Galleries (10)</button>
+</div>
+</div>
+<!-- Monumental Hero Case: The Alps Spire -->
+<div class="group relative w-full bg-surface-container overflow-hidden shadow-2xl transition-all duration-500">
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[560px]">
+<!-- Visual Media Bleed -->
+<div class="lg:col-span-8 relative overflow-hidden min-h-[400px]">
+<img alt="The Alps Spire cantilevered alpine architecture against jagged mountain peaks" class="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK0Im77jaJVtvH96NMnSyx5zyFjxrAkpj8-G5Tt5FfTFitkc-kPI4rCoIRX-shn6iojLz0Ce1PUgPgUIOtB4ZipyDElXUNrwzmDGEJ0EiLGTyRL6dTfDWoMUvolIEd2BA0r1I3XJsVaeo7isW99nhSXslr0Kq0d6bCBCFZhbNZ_VtCsO1gdlSxldTNZiqAdU_RBvTob35OWue6o4CvqVvPwu4SWgY-tiarOwS6NuQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent lg:hidden"></div>
+</div>
+<!-- Editorial Case Brief -->
+<div class="lg:col-span-4 p-space-md lg:p-space-lg flex flex-col justify-between bg-surface-container">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-num text-label-mono-num text-tertiary tracking-widest">N° 052 // ANDERMATT, SWITZERLAND</span>
+<span class="font-label-caps text-[10px] text-outline uppercase">2024 Built</span>
+</div>
+<h3 class="font-headline-md text-headline-sm lg:text-headline-md text-on-surface mb-space-sm group-hover:text-tertiary transition-colors">
+                The Alps Spire
+              </h3>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed mb-space-md">
+                Suspended 2,100 meters above sea level over a glacial gorge, this residence features a 22-meter prestressed carbon-infused concrete cantilever engineered to withstand 180 km/h alpine gales.
+              </p>
+<!-- Architectural Specs Table -->
+<div class="space-y-space-xs text-body-sm border-t border-outline-variant/30 pt-space-sm mb-space-md">
+<div class="flex justify-between font-label-mono-num text-[11px] text-secondary">
+<span>Gross Enclosure</span>
+<span class="text-on-surface font-medium">1,850 m²</span>
+</div>
+<div class="flex justify-between font-label-mono-num text-[11px] text-secondary">
+<span>Geological Bedrock</span>
+<span class="text-on-surface font-medium">Gneiss Granite Monolith</span>
+</div>
+<div class="flex justify-between font-label-mono-num text-[11px] text-secondary">
+<span>Energy Index</span>
+<span class="text-on-surface font-medium">Minergie-P Net-Zero</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Master Architecture &amp; Execution</span>
+<div class="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface group-hover:bg-tertiary group-hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Projects Duo (Asymmetric Mosaic) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Project 02: Villa Solaris -->
+<div class="group flex flex-col bg-surface-container overflow-hidden shadow-xl">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container-high">
+<img alt="Villa Solaris coastal pavilion with infinity pool overlooking Aegean sea" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlUD92snF_yLuwlCseovLh_6sAx3CfcM6P7T0mn5TvjJPcDT6VltOFBWWAW5dIsr2sUIj7rZuQPLGb7_1Ftzh1Z-L2eX8nNjcrCEiSZBicjWs9gEAh31F3ro8MuAa1i5qrlmL6wlTH_XjnFOjMruTibypmfgUO-BRZsVJ3wXY1w3Fa9DJWvJyJ-dnU8GgBAH-Z6opwOSWc-ZWALFFtmfA8w6sprlt1L6WCJ4-d-kg"/>
+<div class="absolute top-4 left-4 bg-primary-container/80 backdrop-blur-md px-3 py-1 text-tertiary font-label-mono-num text-[11px]">
+              048 // CYCLADES
+            </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-outline text-[11px] font-label-caps uppercase mb-2">
+<span>Santorini Cliffside, Greece</span>
+<span>1,200 m²</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-tertiary transition-colors mb-space-xs">
+                Villa Solaris
+              </h4>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed">
+                Step-terraced into volcanic basalt cliffs. Complete with a 30m marine-grade cantilevered saltwater reflecting lane that dissolves into the horizon.
+              </p>
+</div>
+<div class="pt-space-md flex items-center justify-between border-t border-outline-variant/30 mt-space-sm">
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Completed Autumn 2023</span>
+<span class="material-symbols-outlined text-tertiary text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project 03: Travertine Helical Penthouse -->
+<div class="group flex flex-col bg-surface-container overflow-hidden shadow-xl">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container-high">
+<img alt="Travertine Penthouse gallery with sculpted spiral architectural core" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgxl2XFJzBc8iRJ1yndlTI8SZzUHQIiQCTo-laa8U45qbhEHTXEDrsLtweozFgif_N_ytpUxOMhXeciqHoGe3GOcmKIvORWdprglHTgIzJuvdtRHNZEPMVS5Dl0rawXLUjSKRlALCCN4qC6sezrgizNh2zxGmZ1PWHN8TE6v5uNHtTb3k45sliZ4o9dUJi93qDQd67l0b6VEPkJo_-yI76viT3hbeicAEGQ3A0ehI"/>
+<div class="absolute top-4 left-4 bg-primary-container/80 backdrop-blur-md px-3 py-1 text-tertiary font-label-mono-num text-[11px]">
+              039 // ZURICH WEST
+            </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-outline text-[11px] font-label-caps uppercase mb-2">
+<span>Limmat River District, Switzerland</span>
+<span>850 m²</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-tertiary transition-colors mb-space-xs">
+                The Helical Gallery
+              </h4>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed">
+                A two-story private contemporary art gallery anchored by an unreinforced dry-stacked Roman travertine staircase receiving zenith daylight from a bespoke prism skylight.
+              </p>
+</div>
+<div class="pt-space-md flex items-center justify-between border-t border-outline-variant/30 mt-space-sm">
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Completed Spring 2024</span>
+<span class="material-symbols-outlined text-tertiary text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Monograph Index Footer Action -->
+<div class="pt-space-md text-center">
+<a class="inline-flex items-center gap-space-sm px-space-xl py-space-sm bg-surface-container-high hover:bg-tertiary hover:text-primary-container font-label-caps text-label-caps uppercase tracking-[0.25em] text-on-surface transition-all duration-300" href="#monograph-inquiry">
+<span>Request Complete Monograph Monograph Volume XXIV (24 Case Studies)</span>
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 4. OUR EXPERTISE (REFINED 6-SECTOR ARCHITECTURAL GRID) -->
+<section class="w-full bg-surface-dim py-space-xl px-gutter-mobile lg:px-margin relative" id="monograph-expertise">
+<div class="max-w-7xl mx-auto">
+<!-- Section Title Block -->
+<div class="max-w-3xl mb-space-lg">
+<span class="font-label-caps text-label-caps uppercase text-tertiary tracking-[0.24em] block mb-space-xs">Pillars of Execution</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-space-sm">Comprehensive Architectural Stewardship</h2>
+<p class="font-body-lg text-body-md text-secondary font-light">
+          From seismic geology to bespoke bronze door joinery, Monograph synchronizes architectural concept and physical master construction into a unified, zero-tolerance discipline.
+        </p>
+</div>
+<!-- 6-Sector Architectural Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- 01: Architectural Design -->
+<div class="p-space-md bg-surface-container hover:bg-surface-container-high transition-colors duration-300 flex flex-col justify-between min-h-[300px] shadow-lg group">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-mono-num text-[14px] text-tertiary">01 //</span>
+<svg class="w-8 h-8 text-tertiary/80 stroke-current fill-none stroke-[1.5]" viewbox="0 0 24 24">
+<path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h6M9 14h6M9 18h6"></path>
+</svg>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-tertiary transition-colors">Architectural Design</h3>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed">
+              Parametric environmental modeling, bespoke volumetric choreography, solar path alignment, and museum-grade tectonic drawings registered to global municipal standards.
+            </p>
+</div>
+<div class="pt-space-sm font-label-caps text-[10px] text-outline uppercase tracking-wider">Concept to Working Drawing</div>
+</div>
+<!-- 02: Master Residential Construction -->
+<div class="p-space-md bg-surface-container hover:bg-surface-container-high transition-colors duration-300 flex flex-col justify-between min-h-[300px] shadow-lg group">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-mono-num text-[14px] text-tertiary">02 //</span>
+<svg class="w-8 h-8 text-tertiary/80 stroke-current fill-none stroke-[1.5]" viewbox="0 0 24 24">
+<path d="M2 22h20M4 22V9l8-6 8 6v13M10 13h4v9h-4z"></path>
+</svg>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-tertiary transition-colors">Residential Construction</h3>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed">
+              Elite master building division utilizing post-tensioned architectural concrete, seismic dampening, and bespoke building envelope assemblies with 100-year performance lifespans.
+            </p>
+</div>
+<div class="pt-space-sm font-label-caps text-[10px] text-outline uppercase tracking-wider">Swiss Structural Guild Certified</div>
+</div>
+<!-- 03: Commercial Development & Pavilions -->
+<div class="p-space-md bg-surface-container hover:bg-surface-container-high transition-colors duration-300 flex flex-col justify-between min-h-[300px] shadow-lg group">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-mono-num text-[14px] text-tertiary">03 //</span>
+<svg class="w-8 h-8 text-tertiary/80 stroke-current fill-none stroke-[1.5]" viewbox="0 0 24 24">
+<rect height="20" rx="0" width="16" x="4" y="2"></rect>
+<line x1="9" x2="9" y1="6" y2="6.01"></line><line x1="15" x2="15" y1="6" y2="6.01"></line>
+<line x1="9" x2="9" y1="10" y2="10.01"></line><line x1="15" x2="15" y1="10" y2="10.01"></line>
+<line x1="9" x2="9" y1="14" y2="14.01"></line><line x1="15" x2="15" y1="14" y2="14.01"></line>
+</svg>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-tertiary transition-colors">Cultural &amp; Commercial</h3>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed">
+              Private institutional pavilions, winery estates, sculpture foundations, and private family offices executed with acoustic isolation and climatic stabilization.
+            </p>
+</div>
+<div class="pt-space-sm font-label-caps text-[10px] text-outline uppercase tracking-wider">Public &amp; Private Civic Spaces</div>
+</div>
+<!-- 04: Interior Architecture & Millwork -->
+<div class="p-space-md bg-surface-container hover:bg-surface-container-high transition-colors duration-300 flex flex-col justify-between min-h-[300px] shadow-lg group">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-mono-num text-[14px] text-tertiary">04 //</span>
+<svg class="w-8 h-8 text-tertiary/80 stroke-current fill-none stroke-[1.5]" viewbox="0 0 24 24">
+<rect height="16" rx="0" width="18" x="3" y="4"></rect>
+<line x1="3" x2="21" y1="12" y2="12"></line><line x1="12" x2="12" y1="4" y2="20"></line>
+</svg>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-tertiary transition-colors">Interior Architecture</h3>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed">
+              Bespoke smoked oak cabinetry, seamless monolithic stone vanities, custom architectural hardware in patinated unlacquered bronze, and circadian luminaire layout.
+            </p>
+</div>
+<div class="pt-space-sm font-label-caps text-[10px] text-outline uppercase tracking-wider">Artisanal Guild Collaboration</div>
+</div>
+<!-- 05: Turnkey Commissioning -->
+<div class="p-space-md bg-surface-container hover:bg-surface-container-high transition-colors duration-300 flex flex-col justify-between min-h-[300px] shadow-lg group">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-mono-num text-[14px] text-tertiary">05 //</span>
+<svg class="w-8 h-8 text-tertiary/80 stroke-current fill-none stroke-[1.5]" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<path d="M12 6v6l4 2"></path>
+</svg>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-tertiary transition-colors">Turnkey Stewardship</h3>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed">
+              Single-point accountability encompassing parcel acquisition survey, zoning variance negotiation, master construction, and fine art placement up to handover.
+            </p>
+</div>
+<div class="pt-space-sm font-label-caps text-[10px] text-outline uppercase tracking-wider">Total End-to-End Governance</div>
+</div>
+<!-- 06: Conservation & Modernization -->
+<div class="p-space-md bg-surface-container hover:bg-surface-container-high transition-colors duration-300 flex flex-col justify-between min-h-[300px] shadow-lg group">
+<div>
+<div class="flex justify-between items-start mb-space-md">
+<span class="font-label-mono-num text-[14px] text-tertiary">06 //</span>
+<svg class="w-8 h-8 text-tertiary/80 stroke-current fill-none stroke-[1.5]" viewbox="0 0 24 24">
+<path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+</svg>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-tertiary transition-colors">Heritage Modernization</h3>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed">
+              Sensitive conservation of listed European monuments paired with invisible structural retrofitting, ground-source geothermal heating, and ultra-high acoustic glazing.
+            </p>
+</div>
+<div class="pt-space-sm font-label-caps text-[10px] text-outline uppercase tracking-wider">Historic Preservation Protocol</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. THE PROCESS (HORIZONTAL TIMELINE JOURNEY) -->
+<section class="w-full bg-primary-container py-space-xl px-gutter-mobile lg:px-margin relative overflow-hidden">
+<div class="max-w-7xl mx-auto space-y-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-tertiary tracking-[0.25em] block mb-space-xs">Rigorous Methodology</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface">The 4-Stage Architectural Journey</h2>
+</div>
+<div class="font-label-mono-num text-label-mono-num text-secondary">
+          Typical Cycle: 14 – 28 Months
+        </div>
+</div>
+<!-- Horizontal Stage Layout -->
+<div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
+<!-- Continuous Hairline Indicator (Desktop) -->
+<div class="hidden lg:block absolute top-12 left-0 right-0 h-[1px] bg-tertiary/20 -z-0"></div>
+<!-- Stage 01 -->
+<div class="relative z-10 bg-surface-container p-space-md flex flex-col justify-between shadow-xl">
+<div>
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center font-label-mono-num text-tertiary text-sm mb-space-md shadow-md">
+              01
+            </div>
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block mb-1">Phase I</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Discover</h4>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed">
+              Comprehensive geotechnical analysis, microclimate wind mapping, solar trajectory study, and immersive family lifestyle choreography workshops.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline-variant/20 flex justify-between font-label-mono-num text-[11px] text-outline">
+<span>Duration</span>
+<span class="text-tertiary font-medium">6 - 8 Weeks</span>
+</div>
+</div>
+<!-- Stage 02 -->
+<div class="relative z-10 bg-surface-container p-space-md flex flex-col justify-between shadow-xl">
+<div>
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center font-label-mono-num text-tertiary text-sm mb-space-md shadow-md">
+              02
+            </div>
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block mb-1">Phase II</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Design</h4>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed">
+              Parametric volumetric drafting, tactile 1:50 physical lime plaster maquettes, sunlight simulation, and material quarry curation trips in Italy and Greece.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline-variant/20 flex justify-between font-label-mono-num text-[11px] text-outline">
+<span>Duration</span>
+<span class="text-tertiary font-medium">12 - 16 Weeks</span>
+</div>
+</div>
+<!-- Stage 03 -->
+<div class="relative z-10 bg-surface-container p-space-md flex flex-col justify-between shadow-xl">
+<div>
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center font-label-mono-num text-tertiary text-sm mb-space-md shadow-md">
+              03
+            </div>
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block mb-1">Phase III</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Develop</h4>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed">
+              Master craft execution under direct atelier stewardship. Continuous tolerance checks via 3D lidar scanning with zero subcontracting dilution.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline-variant/20 flex justify-between font-label-mono-num text-[11px] text-outline">
+<span>Duration</span>
+<span class="text-tertiary font-medium">10 - 18 Months</span>
+</div>
+</div>
+<!-- Stage 04 -->
+<div class="relative z-10 bg-surface-container p-space-md flex flex-col justify-between shadow-xl">
+<div>
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center font-label-mono-num text-tertiary text-sm mb-space-md shadow-md">
+              04
+            </div>
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block mb-1">Phase IV</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Deliver</h4>
+<p class="font-body-md text-body-sm text-secondary font-light leading-relaxed">
+              Acoustic optimization, smart integration commissioning, white-glove art installation, and presentation of the custom leather-bound Master Monograph.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline-variant/20 flex justify-between font-label-mono-num text-[11px] text-outline">
+<span>Duration</span>
+<span class="text-tertiary font-medium">Handover &amp; Archive</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SIGNATURE STATISTICS (ARCHITECTURAL METRIC ACCENTS) -->
+<section class="w-full bg-surface-container py-space-lg px-gutter-mobile lg:px-margin border-y border-outline-variant/20">
+<div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-space-md lg:gap-0">
+<!-- Metric 1 -->
+<div class="flex flex-col lg:border-r border-outline-variant/20 lg:px-space-md first:pl-0">
+<span class="font-display-hero text-headline-lg lg:text-[72px] leading-none text-tertiary font-serif mb-2">16<span class="text-on-surface font-light">+</span></span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Years of Atelier Excellence</span>
+<span class="font-body-sm text-[12px] text-outline font-light mt-1">Continuous private practice founded 2008</span>
+</div>
+<!-- Metric 2 -->
+<div class="flex flex-col lg:border-r border-outline-variant/20 lg:px-space-md">
+<span class="font-display-hero text-headline-lg lg:text-[72px] leading-none text-tertiary font-serif mb-2">48</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Monumental Residences</span>
+<span class="font-body-sm text-[12px] text-outline font-light mt-1">Built across 4 continents</span>
+</div>
+<!-- Metric 3 -->
+<div class="flex flex-col lg:border-r border-outline-variant/20 lg:px-space-md">
+<span class="font-display-hero text-headline-lg lg:text-[72px] leading-none text-tertiary font-serif mb-2">100<span class="text-on-surface text-headline-md font-light">%</span></span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Patron Discretion</span>
+<span class="font-body-sm text-[12px] text-outline font-light mt-1">Full NDA &amp; confidential ownership registry</span>
+</div>
+<!-- Metric 4 -->
+<div class="flex flex-col lg:px-space-md">
+<span class="font-display-hero text-headline-lg lg:text-[72px] leading-none text-tertiary font-serif mb-2">12</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Global Metropoles</span>
+<span class="font-body-sm text-[12px] text-outline font-light mt-1">Zurich, Tokyo, London, Milan, New York</span>
+</div>
+</div>
+</section>
+<!-- 7. CINEMATIC FULL-WIDTH ARCHITECTURAL STATEMENT -->
+<section class="relative w-full py-space-xl px-gutter-mobile lg:px-margin bg-primary-container overflow-hidden min-h-[600px] flex items-center justify-center">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBK0Im77jaJVtvH96NMnSyx5zyFjxrAkpj8-G5Tt5FfTFitkc-kPI4rCoIRX-shn6iojLz0Ce1PUgPgUIOtB4ZipyDElXUNrwzmDGEJ0EiLGTyRL6dTfDWoMUvolIEd2BA0r1I3XJsVaeo7isW99nhSXslr0Kq0d6bCBCFZhbNZ_VtCsO1gdlSxldTNZiqAdU_RBvTob35OWue6o4CvqVvPwu4SWgY-tiarOwS6NuQ');"></div>
+<div class="absolute inset-0 bg-primary-container/85 backdrop-blur-[2px]"></div>
+<div class="relative z-10 max-w-4xl mx-auto text-center space-y-space-md py-space-md">
+<div class="inline-flex items-center justify-center gap-space-sm">
+<div class="h-[1px] w-12 bg-tertiary"></div>
+<span class="font-label-caps text-label-caps uppercase text-tertiary tracking-[0.3em]">Architectural Manifesto</span>
+<div class="h-[1px] w-12 bg-tertiary"></div>
+</div>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface font-serif uppercase tracking-tight">
+        Built to Last.<br/>
+<span class="italic font-light text-tertiary">Designed to Inspire.</span>
+</h2>
+<p class="font-headline-sm text-headline-sm text-secondary font-serif italic max-w-3xl mx-auto leading-relaxed font-light">
+        "The true measure of architecture is not how it is received today, but how deeply it resonates a century from now when patinated by wind, sun, and time."
+      </p>
+<div class="pt-space-sm">
+<span class="font-label-mono-num text-[12px] text-tertiary uppercase tracking-widest block">Monograph Atelier Council</span>
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Zurich West, 2025 Edition</span>
+</div>
+</div>
+</section>
+<!-- 8. EDITORIAL TESTIMONIALS (PATRON ACCLAIM) -->
+<section class="w-full bg-[#F3F0E8] text-[#14130E] py-space-xl px-gutter-mobile lg:px-margin">
+<div class="max-w-7xl mx-auto">
+<!-- Section Header -->
+<div class="flex items-center gap-space-sm mb-space-lg">
+<span class="w-8 h-[1px] bg-[#90918B]"></span>
+<span class="font-label-caps text-label-caps uppercase text-[#584321] tracking-[0.25em]">Patron Acclaim &amp; Institutional Review</span>
+</div>
+<!-- Grid of Editorial Acclaim -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Quote 1 -->
+<div class="bg-white/80 p-space-lg shadow-xl relative flex flex-col justify-between">
+<div>
+<span class="font-display-hero text-headline-lg text-[#584321] leading-none select-none font-serif block mb-space-xs">“</span>
+<p class="font-headline-sm text-headline-sm text-[#14130E] font-serif leading-snug font-normal mb-space-md">
+              Monograph turned our remote cliffside parcel into an architectural landmark that breathes with the wind and the Aegean sea. Their structural precision and discretion are simply second to none.
+            </p>
+</div>
+<div class="border-t border-[#14130E]/10 pt-space-sm flex justify-between items-end">
+<div>
+<span class="font-headline-sm text-base font-semibold text-[#14130E] block">Lord H. Sterling</span>
+<span class="font-body-sm text-[12px] text-[#474741]">Aegean Villa Patron // Maritime Logistics Chair</span>
+</div>
+<span class="font-label-mono-num text-[11px] text-[#90918B]">2023 // GREECE</span>
+</div>
+</div>
+<!-- Quote 2 -->
+<div class="bg-white/80 p-space-lg shadow-xl relative flex flex-col justify-between">
+<div>
+<span class="font-display-hero text-headline-lg text-[#584321] leading-none select-none font-serif block mb-space-xs">“</span>
+<p class="font-headline-sm text-headline-sm text-[#14130E] font-serif leading-snug font-normal mb-space-md">
+              Working with Monograph redefined our concept of master building. Every beam, every reveal, every massive slab of Roman travertine feels destined. They deliver architectural permanence.
+            </p>
+</div>
+<div class="border-t border-[#14130E]/10 pt-space-sm flex justify-between items-end">
+<div>
+<span class="font-headline-sm text-base font-semibold text-[#14130E] block">M. &amp; K. von Berg</span>
+<span class="font-body-sm text-[12px] text-[#474741]">St. Moritz Alpine Lodge // Private Art Benefactor</span>
+</div>
+<span class="font-label-mono-num text-[11px] text-[#90918B]">2024 // SWITZERLAND</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. CONTACT & FINAL CTA (COMMISSIONING INQUIRY) -->
+<section class="w-full bg-primary-container py-space-xl px-gutter-mobile lg:px-margin relative" id="monograph-inquiry">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Inquiry Text Narrative (Left) -->
+<div class="lg:col-span-5 flex flex-col justify-between space-y-space-md">
+<div>
+<div class="inline-flex items-center gap-space-xs mb-space-sm">
+<span class="h-[1px] w-6 bg-tertiary"></span>
+<span class="font-label-caps text-label-caps uppercase text-tertiary tracking-[0.25em]">Direct Commission</span>
+</div>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-space-md leading-[1.12]">
+              Let’s build something <br/>
+<span class="italic font-light text-tertiary">extraordinary.</span>
+</h2>
+<p class="font-body-lg text-body-md text-secondary font-light leading-relaxed mb-space-md">
+              Private commissions are accepted on a selective basis to maintain our strict standard of architectural and structural stewardship. The atelier commits to four master projects globally each fiscal year.
+            </p>
+<div class="space-y-space-sm border-t border-outline-variant/30 pt-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">security</span>
+<span class="font-body-sm text-body-sm text-secondary">Full institutional NDA guarantee executed upon initial consultation.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">schedule</span>
+<span class="font-body-sm text-body-sm text-secondary">Allocations currently open for calendar year 2025/2026.</span>
+</div>
+</div>
+</div>
+<!-- Studio Contacts -->
+<div class="space-y-space-xs pt-space-md">
+<span class="font-label-caps text-label-caps uppercase text-outline tracking-wider block">Principal Atelier Concierge</span>
+<p class="font-headline-sm text-xl text-on-surface font-serif">commissions@monograph-atelier.ch</p>
+<p class="font-label-mono-num text-sm text-tertiary">+41 (0)44 218 8000</p>
+</div>
+</div>
+<!-- Bespoke Commission Form (Right) -->
+<div class="lg:col-span-7 bg-surface-container p-space-md lg:p-space-lg shadow-2xl">
+<form class="space-y-space-md" onsubmit="event.preventDefault(); alert('Inquiry received. A partner from our Zurich atelier will review your brief within 24 hours under complete client discretion.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Name & Honorific -->
+<div class="space-y-1">
+<label class="font-label-caps text-[11px] uppercase tracking-wider text-outline block">Full Name &amp; Title</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-2 text-on-surface placeholder:text-outline/40 focus:outline-none focus:border-tertiary transition-colors font-body-md text-sm" placeholder="e.g. Elena Rostova, Patron" required="" type="text"/>
+</div>
+<!-- Direct Email -->
+<div class="space-y-1">
+<label class="font-label-caps text-[11px] uppercase tracking-wider text-outline block">Direct Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-2 text-on-surface placeholder:text-outline/40 focus:outline-none focus:border-tertiary transition-colors font-body-md text-sm" placeholder="name@domain.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Telephone / Country -->
+<div class="space-y-1">
+<label class="font-label-caps text-[11px] uppercase tracking-wider text-outline block">Contact Telephone &amp; Dial Code</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-2 text-on-surface placeholder:text-outline/40 focus:outline-none focus:border-tertiary transition-colors font-body-md text-sm" placeholder="+41 ... / +1 ..." type="tel"/>
+</div>
+<!-- Typology Dropdown -->
+<div class="space-y-1">
+<label class="font-label-caps text-[11px] uppercase tracking-wider text-outline block">Project Typology</label>
+<select class="w-full bg-surface-container border-0 border-b border-outline-variant/40 py-2 text-on-surface focus:outline-none focus:border-tertiary transition-colors font-body-md text-sm">
+<option value="private-residence">Private Coastal / Alpine Residence</option>
+<option value="urban-penthouse">Urban Penthouse &amp; Art Sanctuary</option>
+<option value="cultural-pavilion">Cultural Institution or Private Gallery</option>
+<option value="heritage-restoration">Monument Rehabilitation &amp; Modernization</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Geographic Location -->
+<div class="space-y-1">
+<label class="font-label-caps text-[11px] uppercase tracking-wider text-outline block">Estimated Location / Coordinates</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-2 text-on-surface placeholder:text-outline/40 focus:outline-none focus:border-tertiary transition-colors font-body-md text-sm" placeholder="e.g. Engadin, Switzerland or Kyoto, Japan" type="text"/>
+</div>
+<!-- Scope Metric -->
+<div class="space-y-1">
+<label class="font-label-caps text-[11px] uppercase tracking-wider text-outline block">Estimated Scope (m² / Budget Band)</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-2 text-on-surface placeholder:text-outline/40 focus:outline-none focus:border-tertiary transition-colors font-body-md text-sm" placeholder="e.g. 1,000+ m² / Tier I Masterwork" type="text"/>
+</div>
+</div>
+<!-- Vision Statement -->
+<div class="space-y-1 pt-2">
+<label class="font-label-caps text-[11px] uppercase tracking-wider text-outline block">Project Brief &amp; Architectural Intent</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-2 text-on-surface placeholder:text-outline/40 focus:outline-none focus:border-tertiary transition-colors font-body-md text-sm resize-none" placeholder="Describe your parcel topography, structural expectations, or lifestyle vision..." rows="4"></textarea>
+</div>
+<!-- Submit Action -->
+<div class="pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<button class="inline-flex items-center justify-center gap-space-sm px-space-lg py-space-md bg-tertiary text-on-tertiary hover:bg-tertiary-fixed font-label-caps text-label-caps uppercase tracking-[0.25em] font-semibold transition-all duration-300 shadow-xl" type="submit">
+<span>Transmit Commission Inquiry</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<span class="font-label-mono-num text-[11px] text-outline">Direct Atelier Confidentiality Guarantee</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. ARCHITECTURAL STUDIO ACCREDITATION / SUB-FOOTER -->
+<section class="w-full bg-surface-container-lowest py-space-lg px-gutter-mobile lg:px-margin border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-space-md">
+<!-- Studio Brand Logo & Identifier -->
+<div class="flex items-center gap-space-md">
+<img alt="Monograph Architecture Atelier Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBdeGwmABA9MvzYx--8BHf9U0eKBvWSBJVZ7ZH6-cQHzV5Jo6ejwFzcIX2qdNrBWZyuLA7nQObKkgd4kXMcuwrG8_unV6O4A5rKeaDt4YTG0ibyIBeDI5tN8kD6cRC-ZBTYnB2-eo3FV8PLXdHNGkCoQ4xacHhuiY87FPM0ewrInxr7kO_RVoQkHvV74N1BBp0iV2m_U9OX-gdll_FX-lSkSbo9sZUPpIKRWp72PmX-"/>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-[0.25em] font-semibold">Monograph Atelier &amp; Construct</span>
+<span class="font-label-mono-num text-[11px] text-secondary">Federal Architectural Guild N° CH-849-24</span>
+</div>
+</div>
+<!-- Studio Coordinates List -->
+<div class="flex flex-wrap items-center justify-center gap-space-md font-label-mono-num text-[12px] text-secondary">
+<div><span class="text-tertiary">ZURICH:</span> Bahnhofstrasse 42</div>
+<div class="hidden sm:inline text-outline/30">|</div>
+<div><span class="text-tertiary">LONDON:</span> Mayfair Square 8</div>
+<div class="hidden sm:inline text-outline/30">|</div>
+<div><span class="text-tertiary">TOKYO:</span> Minami-Aoyama 5</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant"><div class="w-full px-gutter-mobile lg:px-margin py-space-xl flex flex-col justify-between gap-space-lg"><div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md"><div class="space-y-space-xs"><span class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary">Monograph Atelier &amp; Construct</span><p class="font-headline-sm text-headline-sm text-on-surface max-w-xl">Permanence through architectural discipline, patinated materiality, and structural craft.</p></div><div class="font-label-mono-num text-label-mono-num text-secondary flex flex-col gap-space-xs"><span>Archival Monograph Edition XXIV</span><span>Atelier Coordinates 47.3769° N, 8.5417° E</span></div></div><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm pt-space-md"><span class="font-label-caps text-[10px] uppercase text-outline tracking-wider">© 2025 Monograph Atelier &amp; Construct. All architectural patents and drawings registered.</span><div class="flex items-center gap-space-md"><a class="font-label-caps text-[10px] uppercase text-outline hover:text-on-surface transition-colors" data-path="philosophy" href="#">Colophon</a><a class="font-label-caps text-[10px] uppercase text-outline hover:text-on-surface transition-colors" data-path="inquiry" href="#">Patron Registry</a></div></div></div></footer></body></html>

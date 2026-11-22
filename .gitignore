@@ -1,0 +1,15 @@
+# Dependencies & OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+__pycache__/
+*.pyc
+
+# Editor & IDE
+.vscode/
+.idea/
+
+# Local Python environments
+venv/
+.env
